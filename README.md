@@ -34,6 +34,8 @@ npm run lab         # http://127.0.0.1:4188/accessible-form-demo/
 npm run test:historical
 ```
 
+`npm test` construit automatiquement les fichiers statiques avant les contrôles, y compris après un clone neuf.
+
 `EDIKKA_DEMO_PORT` permet de choisir un port. `npm run import` est une opération réseau explicite : il refuse d’écraser un original dont les octets auraient changé. Le fonctionnement normal n’utilise que les fichiers embarqués.
 
 ## Preuves et limites

@@ -53,6 +53,8 @@ Automated: 28/28 passed. Full environment: Node 22.12.0 / macOS; both transports
 
 ## Adverse observations and adaptations
 
+The first GitHub run (814f3af) passed 27/28 tests: the static-file guard test ran before a build existed in a fresh checkout (500 instead of expected 404). The npm pretest hook now builds first, including on a clean checkout; deployment remains gated by all tests. [Initial run](https://github.com/edikkaweb/accessible-form-demo/actions/runs/36881649324).
+
 The original server returned duplicate=true on first creation and accepted changed content under the same key without conflict. This was reproduced by real HTTP, separately from the new implementation. Originals remain unchanged.
 
 The initial new HTTP fault closed an empty connection. The observed browser retried, returned the stored reference and bypassed the intended unknown state. The final local fault interrupts an incomplete JSON response after headers/body have begun. The browser then remained unknown with one record and required an explicit check. Contract tests passed again.
