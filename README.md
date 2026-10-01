@@ -38,6 +38,8 @@ npm run test:historical
 
 `EDIKKA_DEMO_PORT` permet de choisir un port. `npm run import` est une opération réseau explicite : il refuse d’écraser un original dont les octets auraient changé. Le fonctionnement normal n’utilise que les fichiers embarqués.
 
+[Publication vérifiée / verified publication](docs/DEPLOYMENT.md) · [Bibliothèque : six expériences](https://www.edikka.com/bibliotheque#github-lab)
+
 ## Preuves et limites
 
 **28 tests automatisés réussis**, y compris contrats navigateur/HTTP, concurrence réelle, conflit, annulation d’attente, reprise et confidentialité des exports. Recette manuelle dans le navigateur intégré Codex : quatre parcours, clavier, FR/EN, largeurs 1440/390, lien profond et scripts bloqués. Les détails datés et les limites figurent dans la [matrice attendu/observé](docs/VERIFICATION.md).

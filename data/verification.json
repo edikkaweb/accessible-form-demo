@@ -290,7 +290,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI02",
@@ -300,7 +300,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI03",
@@ -310,7 +310,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI04",
@@ -320,7 +320,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI05",
@@ -340,7 +340,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI07",
@@ -350,7 +350,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI08",
@@ -360,7 +360,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI09",
@@ -380,7 +380,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI11",
@@ -390,7 +390,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-UI12",
@@ -400,7 +400,7 @@
       "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
       "date": "2026-10-01T14:54:37.228Z",
       "status": "observed",
-      "proof": "Dated manual transcript / Edikka action #556"
+      "proof": "docs/proofs/browser-observations.md"
     },
     {
       "id": "AFD-AT01",
@@ -441,6 +441,46 @@
       "date": "2026-10-01T14:54:37.228Z",
       "status": "not tested",
       "proof": "Reproduction steps in docs/REPRODUCTION.md"
+    },
+    {
+      "id": "AFD-PUB01",
+      "expected": "Clean checkout builds before tests and Pages deploys",
+      "observed": "28/28 passed on clean macOS copy; corrected GitHub run completed successfully",
+      "method": "npm pretest + GitHub Actions",
+      "environment": "Node 22.12.0/macOS and Node 22/ubuntu-latest; commit 94475d0",
+      "date": "2026-10-01T15:16:51.618098+00:00",
+      "status": "observed",
+      "proof": "https://github.com/edikkaweb/accessible-form-demo/actions/runs/36882182918"
+    },
+    {
+      "id": "AFD-PUB02",
+      "expected": "FR/EN HTML and public resources match built candidate",
+      "observed": "21 served files returned 200 and matched bytes/SHA-256; .nojekyll is a build-only marker, not served by Pages",
+      "method": "HTTP GET + byte/hash comparison",
+      "environment": "Public GitHub Pages; initial deployed app commit 94475d0",
+      "date": "2026-10-01T15:16:51.618098+00:00",
+      "status": "observed",
+      "proof": "docs/proofs/first-public-resources.json"
+    },
+    {
+      "id": "AFD-PUB03",
+      "expected": "Published C stays unknown, verifies, retries without duplicate; EN mobile equivalent",
+      "observed": "FR: counts 1/1, reference unconfirmed; check DEMO-001; retry 2/1 same reference. EN: 390px no overflow, unknown then confirmed, language switch preserves request",
+      "method": "Browser keyboard/DOM/visual",
+      "environment": "Codex in-app browser/macOS; 1440x1000 FR and 390x844 EN; GitHub Pages",
+      "date": "2026-10-01T15:16:51.618098+00:00",
+      "status": "observed",
+      "proof": "docs/proofs/public-desktop-unknown.jpg"
+    },
+    {
+      "id": "AFD-PUB04",
+      "expected": "Six Edikka pages link demo/code/protocol without archive or metadata drift",
+      "observed": "FR/EN library and both articles HTTP 200; each one contextual block; six lab cards, 24 instruments; canonical/hreflang/JSON-LD/downloads unchanged; 13 protected hashes unchanged",
+      "method": "HTTP HTML comparison + browser + bounded deployment verification",
+      "environment": "www.edikka.com; release accessible-form-demo-fr-en-20261001-v1, 9 files, no DB writes",
+      "date": "2026-10-01T15:16:51.618098+00:00",
+      "status": "observed",
+      "proof": "docs/proofs/public-library.jpg"
     }
   ]
 }

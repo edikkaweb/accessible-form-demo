@@ -63,4 +63,13 @@ The ordinary automation press helper refuses controls with aria-disabled=true. T
 
 Blocking scripts via CSP is a static-fallback observation, not a claim that the browser’s global JavaScript preference was disabled. Native download content/link are inspected; file-save-dialog behaviour is not inferred. No screen-reader audio, participants, physical phone, or global WCAG certification.
 
-Deployment is verified separately after publishing; a local build or the tests above do not establish public availability.
+Publication was verified separately after the corrected workflow succeeded. See the dated checks below and [deployment receipt](DEPLOYMENT.md).
+
+## Publication observations
+
+| ID | Expected | Observed | Method | Environment | Date UTC | Status | Evidence |
+|---|---|---|---|---|---|---|---|
+| AFD-PUB01 | Clean checkout builds before tests and Pages deploys | 28/28 passed on clean macOS copy; corrected GitHub run completed successfully | npm pretest + GitHub Actions | Node 22.12.0/macOS and Node 22/ubuntu-latest; commit 94475d0 | 2026-10-01 | observed | [Evidence](https://github.com/edikkaweb/accessible-form-demo/actions/runs/36882182918) |
+| AFD-PUB02 | FR/EN HTML and public resources match built candidate | 21 served files returned 200 and matched bytes/SHA-256; .nojekyll is a build-only marker, not served by Pages | HTTP GET + byte/hash comparison | Public GitHub Pages; initial deployed app commit 94475d0 | 2026-10-01 | observed | [Evidence](proofs/first-public-resources.json) |
+| AFD-PUB03 | Published C stays unknown, verifies, retries without duplicate; EN mobile equivalent | FR: counts 1/1, reference unconfirmed; check DEMO-001; retry 2/1 same reference. EN: 390px no overflow, unknown then confirmed, language switch preserves request | Browser keyboard/DOM/visual | Codex in-app browser/macOS; 1440x1000 FR and 390x844 EN; GitHub Pages | 2026-10-01 | observed | [Evidence](proofs/public-desktop-unknown.jpg) |
+| AFD-PUB04 | Six Edikka pages link demo/code/protocol without archive or metadata drift | FR/EN library and both articles HTTP 200; each one contextual block; six lab cards, 24 instruments; canonical/hreflang/JSON-LD/downloads unchanged; 13 protected hashes unchanged | HTTP HTML comparison + browser + bounded deployment verification | www.edikka.com; release accessible-form-demo-fr-en-20261001-v1, 9 files, no DB writes | 2026-10-01 | observed | [Evidence](proofs/public-library.jpg) |

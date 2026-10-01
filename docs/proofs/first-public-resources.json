@@ -1,0 +1,114 @@
+{
+  "at": "2026-10-01T15:12:09.571Z",
+  "base": "https://edikkaweb.github.io/accessible-form-demo/",
+  "buildOnly": [
+    ".nojekyll"
+  ],
+  "files": [
+    {
+      "file": "build-manifest.json",
+      "bytes": 3219,
+      "sha256": "4750ab24d26aa657c25a139ebcbc54ad580c256d7a0152af236f0c39aeece074"
+    },
+    {
+      "file": "assets/app.mjs",
+      "bytes": 9726,
+      "sha256": "38715a561739adb8b744d72c5b42d5e17f34873fbb05d91c83f9b37a9ca8f06d"
+    },
+    {
+      "file": "assets/contract.mjs",
+      "bytes": 2287,
+      "sha256": "5e2e1aae17479da598dd95b047391208a42bf222caaf3891a1e37a507e529e40"
+    },
+    {
+      "file": "assets/controller.mjs",
+      "bytes": 6807,
+      "sha256": "2ae2db61fe39d0240b16715efca12b6dcee397dc76532a9327464e4cd8bd1dee"
+    },
+    {
+      "file": "assets/i18n.mjs",
+      "bytes": 23986,
+      "sha256": "8494554b26234f9ce9096ac1d60eeaf07a703b5d444d930438bba72351a03c5f"
+    },
+    {
+      "file": "assets/service.mjs",
+      "bytes": 3990,
+      "sha256": "5a2bcd09f80f3d49cb40ab407b8501c88f94001725913d2c902ad7eb28ef8bad"
+    },
+    {
+      "file": "assets/style.css",
+      "bytes": 10078,
+      "sha256": "7c6a75f02bb031c1df55fc4cbc8e6778d69b39d238c95ab37dd4883764bca74e"
+    },
+    {
+      "file": "assets/transports.mjs",
+      "bytes": 1918,
+      "sha256": "a206143e0bb0f5fe89d4913d7c431e95834a4530e214b27f0c6b5b3423251dec"
+    },
+    {
+      "file": "data/provenance.json",
+      "bytes": 4117,
+      "sha256": "dfe9fdb5d9b063111aabba06935e4cd2b052feec22bc3742c01f40a71d8620fa"
+    },
+    {
+      "file": "data/verification.json",
+      "bytes": 19925,
+      "sha256": "8062ee2c0c6784752ffaf410fb54981528346885660989b4b6e0211822960891"
+    },
+    {
+      "file": "index-en.html",
+      "bytes": 14743,
+      "sha256": "63537950cfc88f28b5027fe7c4a7f538c041fc4b060b0d9bb3763e890b2d0283"
+    },
+    {
+      "file": "index.html",
+      "bytes": 15529,
+      "sha256": "fe1cd424c99e58a815ca0b5406f6bcf6c88edc96f38bf6fd26e5f5a63b1c2fd4"
+    },
+    {
+      "file": "originals/accessible-form-reference/README.md",
+      "bytes": 1439,
+      "sha256": "9a1a05e326c00884344245a8528287a1269587ac7c32d19aefc4f99cf236cd22"
+    },
+    {
+      "file": "originals/accessible-form-reference/index.html",
+      "bytes": 8276,
+      "sha256": "ff3c37a734bd2c7aea64073be89b0d26f7728ef25448f1a6cf05ecc476b719d5"
+    },
+    {
+      "file": "originals/accessible-form-reference/server.mjs",
+      "bytes": 4225,
+      "sha256": "9466c9d466b524c18c37ba03aea97675c8982dc7f16a2d1a78c5e722e0e7894e"
+    },
+    {
+      "file": "originals/accessible-form-reference/test.mjs",
+      "bytes": 2325,
+      "sha256": "18cf4d01ac06de66aed4d3bf87292a73388c2e26f220eac08345aa5b37c240c1"
+    },
+    {
+      "file": "originals/ux-writing/manifest.json",
+      "bytes": 878,
+      "sha256": "cb72265c85f573f4eab14f9de416ad9c21db7f374de202c261b2826fec385ac9"
+    },
+    {
+      "file": "originals/ux-writing/protocole-ux-writing-edikka-v1.json",
+      "bytes": 27323,
+      "sha256": "568543626490b07aaa7c53109f387de0c8b3d763a01637564ebd43436614b09a"
+    },
+    {
+      "file": "originals/ux-writing/protocole-ux-writing-edikka-v1.xlsx",
+      "bytes": 21152,
+      "sha256": "d5dfd9fe3bdaf8aa889baa575b0cff4ed0597d917e747518b5e69f242608e687"
+    },
+    {
+      "file": "originals/ux-writing/ux-writing-clearer-interfaces.md",
+      "bytes": 20662,
+      "sha256": "e7ba888d75c25d6e3b7f5e1e648e98d2e216a8177685800cde02f3dd2e4ae413"
+    },
+    {
+      "file": "originals/ux-writing/ux-writing-interfaces-claires.md",
+      "bytes": 23286,
+      "sha256": "de5eb54850444738d8da86c868c6e35635b4f53f0cdbd17be8cadc7ac24628b5"
+    }
+  ]
+}
