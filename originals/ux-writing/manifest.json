@@ -1,0 +1,22 @@
+{
+    "release": "ux-writing-edikka-reference-v1.0.1",
+    "generated_at": "2026-09-03T15:29:18+02:00",
+    "files": {
+        "docbd/data/protocole-ux-writing-edikka-v1.json": {
+            "bytes": 27323,
+            "sha256": "568543626490b07aaa7c53109f387de0c8b3d763a01637564ebd43436614b09a"
+        },
+        "docbd/data/protocole-ux-writing-edikka-v1.xlsx": {
+            "bytes": 21152,
+            "sha256": "d5dfd9fe3bdaf8aa889baa575b0cff4ed0597d917e747518b5e69f242608e687"
+        },
+        "llms/insights/ux-writing-interfaces-claires.md": {
+            "bytes": 23286,
+            "sha256": "de5eb54850444738d8da86c868c6e35635b4f53f0cdbd17be8cadc7ac24628b5"
+        },
+        "llms/insights/ux-writing-clearer-interfaces.md": {
+            "bytes": 20662,
+            "sha256": "e7ba888d75c25d6e3b7f5e1e648e98d2e216a8177685800cde02f3dd2e4ae413"
+        }
+    }
+}

@@ -1,0 +1,547 @@
+{
+  "title": {
+    "fr": "Protocole UX writing Edikka : trois interfaces, seize contrôles et preuves rejouables",
+    "en": "Edikka UX writing protocol: three interfaces, sixteen checks and replayable evidence"
+  },
+  "method_version": "1.0.1",
+  "published_at": "2026-09-03",
+  "last_reviewed": "2026-09-03",
+  "next_review": "2026-12-03",
+  "release_history": [
+    {
+      "version": "1.0.1",
+      "published_at": "2026-09-03T15:29:18+02:00",
+      "fr": "Correction de la répartition des résultats par interface dans le bilan public. Les seize observations, les neuf écarts corrigés et le résultat UXW06 à tester restent inchangés.",
+      "en": "Corrected the per-interface result distribution in the public summary. The sixteen observations, nine corrected gaps and UXW06 to-test result remain unchanged."
+    },
+    {
+      "version": "1.0",
+      "published_at": "2026-09-03T14:53:52+02:00",
+      "fr": "Protocole figé ; trois interfaces auditées ; neuf écarts corrigés ; UXW06 maintenu à tester.",
+      "en": "Protocol frozen; three interfaces audited; nine gaps corrected; UXW06 kept to test."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": [
+    {
+      "name": "Bertrand Morel",
+      "organization": "Edikka",
+      "url": "https://www.edikka.com/agence"
+    }
+  ],
+  "scope": {
+    "surfaces": 3,
+    "checks": 16,
+    "before": {
+      "satisfied": 6,
+      "to_correct": 9,
+      "to_test": 1,
+      "out_of_scope": 0
+    },
+    "after": {
+      "satisfied": 15,
+      "to_correct": 0,
+      "to_test": 1,
+      "out_of_scope": 0
+    },
+    "claims_excluded": [
+      {
+        "fr": "Aucun gain de conversion, de satisfaction ou de compréhension n'est déduit de ces contrôles.",
+        "en": "No conversion, satisfaction or comprehension uplift is inferred from these checks."
+      },
+      {
+        "fr": "Une conformité de microcopie ne prouve ni la conformité RGAA d'une page, ni la conformité WCAG d'un site.",
+        "en": "Microcopy conformance does not prove RGAA conformance for a page or WCAG conformance for a website."
+      },
+      {
+        "fr": "Les contrôles qui exigent une technologie d'assistance restent « À tester » tant que le contre-test humain n'est pas publié.",
+        "en": "Checks requiring assistive technology remain ‘To test’ until a human retest is published."
+      }
+    ]
+  },
+  "controlled_vocabularies": {
+    "result": ["Satisfait", "À corriger", "À tester", "Hors périmètre"],
+    "result_en": ["Satisfied", "To correct", "To test", "Out of scope"],
+    "basis": ["WCAG", "Pattern d'interface", "Intégrité de preuve"],
+    "basis_en": ["WCAG", "Interface pattern", "Evidence integrity"],
+    "severity": ["Bloquante", "Haute", "Moyenne"],
+    "severity_en": ["Blocking", "High", "Medium"]
+  },
+  "surfaces": [
+    {
+      "id": "agent-ready",
+      "fr": "Test de préparation aux agents IA",
+      "en": "AI agent readiness test",
+      "url": "https://www.edikka.com/test-preparation-agents-ia",
+      "state": {
+        "fr": "Comparaison mixte : un concurrent lisible, un concurrent non décisif.",
+        "en": "Mixed comparison: one readable competitor and one inconclusive competitor."
+      },
+      "before_screenshot": "https://www.edikka.com/docbd/article/divers/ux-writing-agent-ready-before-2026-09-03.jpg",
+      "after_screenshot": "https://www.edikka.com/docbd/article/divers/ux-writing-agent-ready-after-2026-09-03.jpg"
+    },
+    {
+      "id": "contact",
+      "fr": "Formulaire de contact",
+      "en": "Contact form",
+      "url": "https://www.edikka.com/contact",
+      "state": {
+        "fr": "Soumission vide : quatre champs obligatoires invalides.",
+        "en": "Empty submission: four invalid required fields."
+      },
+      "before_screenshot": "https://www.edikka.com/docbd/article/divers/ux-writing-contact-errors-before-2026-09-03.jpg",
+      "after_screenshot": "https://www.edikka.com/docbd/article/divers/ux-writing-contact-errors-after-2026-09-03.jpg"
+    },
+    {
+      "id": "article-actions",
+      "fr": "Actions de l'article UX writing",
+      "en": "UX writing article actions",
+      "url": "https://www.edikka.com/insights/ux-ui-design/ux-writing-interfaces-claires",
+      "state": {
+        "fr": "Choisir entre télécharger la grille et demander un audit d'interface.",
+        "en": "Choose between downloading the grid and requesting an interface audit."
+      },
+      "before_screenshot": "https://www.edikka.com/docbd/article/divers/ux-writing-article-actions-before-2026-09-03.jpg",
+      "after_screenshot": "https://www.edikka.com/docbd/article/divers/ux-writing-article-actions-after-2026-09-03.jpg"
+    }
+  ],
+  "checks": [
+    {
+      "id": "UXW01",
+      "surface": "agent-ready",
+      "basis": "Intégrité de preuve",
+      "basis_en": "Evidence integrity",
+      "severity": "Bloquante",
+      "severity_en": "Blocking",
+      "reference": "Edikka evidence-state rule v1.0",
+      "fr": {
+        "check": "Le verdict global ne dépend que des scans dont la fiabilité franchit le seuil publié.",
+        "acceptance": "Un résultat non décisif est exclu du rang confirmé et ne peut ni créer ni effacer une avance ou un retard.",
+        "before_observation": "Le verdict entier passait à « à confirmer » dès qu'un seul concurrent était peu lisible.",
+        "after_observation": "Le sous-ensemble fiable porte le verdict ; les résultats non décisifs sont présentés à part.",
+        "proof": "Cas rejoué : Edikka 40/45, Access42 42/45 fiable, Claude 10/45 non décisif."
+      },
+      "en": {
+        "check": "The overall verdict only depends on scans that pass the published reliability threshold.",
+        "acceptance": "An inconclusive result is excluded from the confirmed rank and cannot create or erase a lead or lag.",
+        "before_observation": "The whole verdict became ‘to confirm’ as soon as one competitor was poorly readable.",
+        "after_observation": "The reliable subset drives the verdict; inconclusive results are reported separately.",
+        "proof": "Replayed case: Edikka 40/45, Access42 42/45 reliable, Claude 10/45 inconclusive."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW02",
+      "surface": "agent-ready",
+      "basis": "Intégrité de preuve",
+      "basis_en": "Evidence integrity",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "Edikka evidence-state rule v1.0",
+      "fr": {
+        "check": "Chaque résultat non décisif est nommé et compté.",
+        "acceptance": "Le lecteur sait combien de résultats sont exclus et pourquoi, sans devoir ouvrir le détail de chaque scan.",
+        "before_observation": "La prudence globale masquait la nature du scan faible.",
+        "after_observation": "Le verdict annonce « 1 résultat non décisif exclu » et la carte en donne la raison.",
+        "proof": "Libellé global et qualité affichée sur chaque concurrent."
+      },
+      "en": {
+        "check": "Every inconclusive result is named and counted.",
+        "acceptance": "Readers know how many results are excluded and why without opening every scan detail.",
+        "before_observation": "The global caveat hid the nature of the weak scan.",
+        "after_observation": "The verdict states ‘1 inconclusive result excluded’ and the card gives the reason.",
+        "proof": "Global label and per-competitor quality shown together."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW03",
+      "surface": "agent-ready",
+      "basis": "Intégrité de preuve",
+      "basis_en": "Evidence integrity",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "Edikka evidence-state rule v1.0",
+      "fr": {
+        "check": "La formulation reprend l'écart réellement confirmé.",
+        "acceptance": "Le nombre de points et le sens de l'écart correspondent au sous-ensemble fiable.",
+        "before_observation": "« Retard apparent » ne distinguait pas l'écart fiable de l'écart douteux.",
+        "after_observation": "« Retard confirmé face à un concurrent lisible » est relié à l'écart de 2 points.",
+        "proof": "Comparaison des scores publics et du verdict rendu."
+      },
+      "en": {
+        "check": "The wording reproduces the actually confirmed gap.",
+        "acceptance": "The point difference and its direction match the reliable subset.",
+        "before_observation": "‘Apparent lag’ did not separate reliable from doubtful differences.",
+        "after_observation": "‘Confirmed lag behind one readable competitor’ is tied to the two-point gap.",
+        "proof": "Comparison of public scores with the rendered verdict."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW04",
+      "surface": "agent-ready",
+      "basis": "Intégrité de preuve",
+      "basis_en": "Evidence integrity",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "Edikka evidence-state rule v1.0",
+      "fr": {
+        "check": "Le rapport conserve la qualité de chaque scan, pas seulement son score.",
+        "acceptance": "Score, niveau de fiabilité et deux raisons au maximum restent visibles dans le rapport partageable.",
+        "before_observation": "Le rapport listait les scores concurrents sans leur qualité de lecture.",
+        "after_observation": "Chaque carte concurrent affiche son statut de qualité et ses raisons.",
+        "proof": "Rapport public généré après le correctif."
+      },
+      "en": {
+        "check": "The report retains each scan's quality, not only its score.",
+        "acceptance": "Score, reliability level and at most two reasons remain visible in the shareable report.",
+        "before_observation": "The report listed competitor scores without readability quality.",
+        "after_observation": "Every competitor card displays its quality status and reasons.",
+        "proof": "Public report generated after the fix."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW05",
+      "surface": "agent-ready",
+      "basis": "Intégrité de preuve",
+      "basis_en": "Evidence integrity",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "Edikka evidence-state rule v1.0",
+      "fr": {
+        "check": "Le résumé, le rang et les cartes concurrentes racontent la même conclusion.",
+        "acceptance": "Aucune couche n'affiche un rang brut de trois participants quand le verdict confirmé n'en compare que deux.",
+        "before_observation": "Le rang brut et le verdict prudent pouvaient se contredire.",
+        "after_observation": "Le rang confirmé est 2/2 ; le troisième résultat est explicitement exclu.",
+        "proof": "Lecture croisée du résumé exécutif, du bloc comparaison et du rapport."
+      },
+      "en": {
+        "check": "The summary, rank and competitor cards tell the same conclusion.",
+        "acceptance": "No layer shows a raw three-participant rank when the confirmed verdict only compares two.",
+        "before_observation": "Raw rank and cautious verdict could contradict each other.",
+        "after_observation": "Confirmed rank is 2/2; the third result is explicitly excluded.",
+        "proof": "Cross-reading the executive summary, comparison panel and report."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW06",
+      "surface": "agent-ready",
+      "basis": "WCAG",
+      "basis_en": "WCAG",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "WCAG 2.2 · 4.1.3 Status Messages",
+      "fr": {
+        "check": "Le verdict injecté dynamiquement est annoncé sans déplacement de focus.",
+        "acceptance": "Le résultat important est exposé à une technologie d'assistance avec le nom, le rôle et le contexte utiles.",
+        "before_observation": "Le conteneur porte aria-live=polite, mais l'annonce réelle n'a pas été vérifiée avec une technologie d'assistance.",
+        "after_observation": "Le marquage programmatique est conservé ; le contre-test VoiceOver/NVDA reste à publier.",
+        "proof": "Inspection DOM disponible ; preuve humaine non publiée."
+      },
+      "en": {
+        "check": "The dynamically injected verdict is announced without moving focus.",
+        "acceptance": "The important result is exposed to assistive technology with a useful name, role and context.",
+        "before_observation": "The container has aria-live=polite, but the actual announcement was not verified with assistive technology.",
+        "after_observation": "Programmatic markup is retained; the VoiceOver/NVDA retest remains to be published.",
+        "proof": "DOM inspection available; human evidence not published."
+      },
+      "before_result": "À tester",
+      "after_result": "À tester"
+    },
+    {
+      "id": "UXW07",
+      "surface": "contact",
+      "basis": "Pattern d'interface",
+      "basis_en": "Interface pattern",
+      "severity": "Moyenne",
+      "severity_en": "Medium",
+      "reference": "GOV.UK Design System · Error summary",
+      "fr": {
+        "check": "Le résumé d'erreurs annonce le nombre de champs à corriger.",
+        "acceptance": "Le titre emploie le singulier pour un champ et le pluriel avec le nombre exact au-delà.",
+        "before_observation": "Le titre générique n'indiquait pas l'ampleur de la correction.",
+        "after_observation": "« 4 champs à corriger avant d'envoyer votre demande. »",
+        "proof": "Soumission vide du formulaire de contact."
+      },
+      "en": {
+        "check": "The error summary states how many fields need correction.",
+        "acceptance": "The title uses singular for one field and the exact plural count beyond one.",
+        "before_observation": "The generic title did not state the size of the correction task.",
+        "after_observation": "‘4 fields to correct before sending your request.’",
+        "proof": "Empty submission of the contact form."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW08",
+      "surface": "contact",
+      "basis": "Pattern d'interface",
+      "basis_en": "Interface pattern",
+      "severity": "Moyenne",
+      "severity_en": "Medium",
+      "reference": "GOV.UK Design System · Error message",
+      "fr": {
+        "check": "Le résumé et le message associé au champ emploient exactement la même correction.",
+        "acceptance": "Le lien du résumé reprend le message inline sans préfixe différent ni reformulation.",
+        "before_observation": "Le résumé ajoutait « Prénom : » au message inline.",
+        "after_observation": "Les deux emplacements annoncent « Veuillez renseigner votre prénom. »",
+        "proof": "Comparaison du résumé et du champ prénom après soumission."
+      },
+      "en": {
+        "check": "The summary and field-associated message use exactly the same correction.",
+        "acceptance": "The summary link repeats the inline message without a different prefix or rewrite.",
+        "before_observation": "The summary added ‘First name:’ to the inline message.",
+        "after_observation": "Both locations announce ‘Enter your first name.’",
+        "proof": "Comparison of summary and first-name field after submission."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW09",
+      "surface": "contact",
+      "basis": "WCAG",
+      "basis_en": "WCAG",
+      "severity": "Bloquante",
+      "severity_en": "Blocking",
+      "reference": "WCAG 2.2 · 3.3.1 Error Identification; 3.3.3 Error Suggestion",
+      "fr": {
+        "check": "Chaque erreur est identifiée en texte et propose une correction exploitable.",
+        "acceptance": "Le message ne dépend ni de la couleur ni d'une icône et indique l'information attendue.",
+        "before_observation": "Les quatre messages indiquaient déjà l'information manquante ou invalide.",
+        "after_observation": "Les messages sont conservés et deviennent la source unique du résumé.",
+        "proof": "Messages prénom, nom, e-mail et projet."
+      },
+      "en": {
+        "check": "Every error is identified in text and offers an actionable correction.",
+        "acceptance": "The message does not depend on colour or an icon and states the expected information.",
+        "before_observation": "All four messages already stated the missing or invalid information.",
+        "after_observation": "Messages are retained and become the single source for the summary.",
+        "proof": "First name, last name, email and project messages."
+      },
+      "before_result": "Satisfait",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW10",
+      "surface": "contact",
+      "basis": "Pattern d'interface",
+      "basis_en": "Interface pattern",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "GOV.UK Design System · Error summary",
+      "fr": {
+        "check": "Le focus va au résumé après une soumission invalide.",
+        "acceptance": "Le résumé devient visible, reçoit le focus et peut être parcouru immédiatement.",
+        "before_observation": "Le comportement était déjà présent.",
+        "after_observation": "Le comportement est conservé et rejoué.",
+        "proof": "Soumission vide puis inspection de document.activeElement."
+      },
+      "en": {
+        "check": "Focus moves to the summary after an invalid submission.",
+        "acceptance": "The summary becomes visible, receives focus and can be reviewed immediately.",
+        "before_observation": "The behaviour was already present.",
+        "after_observation": "The behaviour is retained and replayed.",
+        "proof": "Empty submission followed by document.activeElement inspection."
+      },
+      "before_result": "Satisfait",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW11",
+      "surface": "contact",
+      "basis": "Pattern d'interface",
+      "basis_en": "Interface pattern",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "GOV.UK Design System · Error summary",
+      "fr": {
+        "check": "Chaque entrée du résumé conduit au champ concerné.",
+        "acceptance": "Le lien cible l'identifiant du champ et le clic place le focus dans ce champ.",
+        "before_observation": "Le comportement était déjà présent.",
+        "after_observation": "Le comportement est conservé et rejoué.",
+        "proof": "Activation successive des quatre liens du résumé."
+      },
+      "en": {
+        "check": "Every summary entry leads to the relevant field.",
+        "acceptance": "The link targets the field ID and activation moves focus into that field.",
+        "before_observation": "The behaviour was already present.",
+        "after_observation": "The behaviour is retained and replayed.",
+        "proof": "Successive activation of the four summary links."
+      },
+      "before_result": "Satisfait",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW12",
+      "surface": "contact",
+      "basis": "WCAG",
+      "basis_en": "WCAG",
+      "severity": "Bloquante",
+      "severity_en": "Blocking",
+      "reference": "WCAG 2.2 · 3.3.1; 3.3.2; 4.1.2",
+      "fr": {
+        "check": "Le champ invalide expose son état et la relation avec son message.",
+        "acceptance": "aria-invalid vaut true et aria-describedby référence l'identifiant du message visible.",
+        "before_observation": "L'état et la relation programmatiques étaient déjà présents.",
+        "after_observation": "Ils sont conservés ; le texte visible est désormais synchronisé avec le résumé.",
+        "proof": "Inspection DOM des quatre champs invalides."
+      },
+      "en": {
+        "check": "The invalid field exposes its state and relationship to its message.",
+        "acceptance": "aria-invalid is true and aria-describedby references the visible message ID.",
+        "before_observation": "Programmatic state and relationship were already present.",
+        "after_observation": "They are retained; visible wording is now synchronised with the summary.",
+        "proof": "DOM inspection of all four invalid fields."
+      },
+      "before_result": "Satisfait",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW13",
+      "surface": "article-actions",
+      "basis": "WCAG",
+      "basis_en": "WCAG",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "WCAG 2.2 · 2.4.4 Link Purpose (In Context)",
+      "fr": {
+        "check": "L'action principale nomme l'objet obtenu ou la destination.",
+        "acceptance": "Le lien reste compréhensible dans sa carte et n'emploie pas un diagnostic générique pour un téléchargement.",
+        "before_observation": "Le panneau générique proposait « Demander un diagnostic » sans lien direct avec la méthode publiée.",
+        "after_observation": "L'action principale devient « Télécharger la grille UX writing (XLSX) ».",
+        "proof": "Panneau d'action spécifique à l'article."
+      },
+      "en": {
+        "check": "The primary action names the obtained object or destination.",
+        "acceptance": "The link remains understandable in its card and does not use a generic diagnosis label for a download.",
+        "before_observation": "The generic panel offered ‘Request a diagnosis’ without a direct link to the published method.",
+        "after_observation": "The primary action becomes ‘Download the UX writing grid (XLSX)’.",
+        "proof": "Article-specific action panel."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW14",
+      "surface": "article-actions",
+      "basis": "Pattern d'interface",
+      "basis_en": "Interface pattern",
+      "severity": "Moyenne",
+      "severity_en": "Medium",
+      "reference": "Edikka download-label rule v1.0",
+      "fr": {
+        "check": "Le format du fichier est annoncé avant l'activation.",
+        "acceptance": "Le libellé visible contient XLSX et l'attribut download fournit un nom stable.",
+        "before_observation": "Le panneau parlait d'une checklist sans annoncer de format ni de ressource dédiée.",
+        "after_observation": "Le format XLSX et le nom de téléchargement sont explicites.",
+        "proof": "Texte visible, attribut download et événement data-download-name."
+      },
+      "en": {
+        "check": "The file format is announced before activation.",
+        "acceptance": "The visible label includes XLSX and the download attribute provides a stable filename.",
+        "before_observation": "The panel mentioned a checklist without announcing a format or dedicated resource.",
+        "after_observation": "XLSX format and download name are explicit.",
+        "proof": "Visible wording, download attribute and data-download-name event."
+      },
+      "before_result": "À corriger",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW15",
+      "surface": "article-actions",
+      "basis": "WCAG",
+      "basis_en": "WCAG",
+      "severity": "Haute",
+      "severity_en": "High",
+      "reference": "WCAG 2.2 · 2.5.3 Label in Name",
+      "fr": {
+        "check": "Le nom accessible contient le libellé visible.",
+        "acceptance": "Aucun aria-label ne remplace les mots affichés par une formulation différente.",
+        "before_observation": "Les liens utilisaient déjà leur texte visible comme nom accessible.",
+        "after_observation": "Le principe est conservé pour les deux actions spécifiques.",
+        "proof": "Inspection de l'arbre d'accessibilité et des attributs du lien."
+      },
+      "en": {
+        "check": "The accessible name contains the visible label.",
+        "acceptance": "No aria-label replaces the displayed words with different wording.",
+        "before_observation": "Links already used their visible text as accessible name.",
+        "after_observation": "The principle is retained for both specific actions.",
+        "proof": "Accessibility-tree and link-attribute inspection."
+      },
+      "before_result": "Satisfait",
+      "after_result": "Satisfait"
+    },
+    {
+      "id": "UXW16",
+      "surface": "article-actions",
+      "basis": "Intégrité de preuve",
+      "basis_en": "Evidence integrity",
+      "severity": "Moyenne",
+      "severity_en": "Medium",
+      "reference": "Edikka bilingual-intent rule v1.0",
+      "fr": {
+        "check": "Les versions française et anglaise conservent la même intention et le même niveau de précision.",
+        "acceptance": "Objet, format, destination et promesse restent équivalents ; seule la langue change.",
+        "before_observation": "L'intention générique était équivalente dans les deux langues.",
+        "after_observation": "« Télécharger la grille UX writing (XLSX) » et « Download the UX writing grid (XLSX) » décrivent le même résultat.",
+        "proof": "Comparaison des deux panneaux d'action."
+      },
+      "en": {
+        "check": "French and English versions retain the same intent and level of precision.",
+        "acceptance": "Object, format, destination and promise remain equivalent; only the language changes.",
+        "before_observation": "The generic intent was equivalent in both languages.",
+        "after_observation": "‘Télécharger la grille UX writing (XLSX)’ and ‘Download the UX writing grid (XLSX)’ describe the same result.",
+        "proof": "Comparison of both action panels."
+      },
+      "before_result": "Satisfait",
+      "after_result": "Satisfait"
+    }
+  ],
+  "sources": [
+    {
+      "name": "W3C Understanding SC 2.4.4: Link Purpose (In Context)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
+      "role": "Link purpose"
+    },
+    {
+      "name": "W3C Understanding SC 2.5.3: Label in Name",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+      "role": "Visible label and accessible name"
+    },
+    {
+      "name": "W3C Understanding SC 3.3.1: Error Identification",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+      "role": "Text error identification"
+    },
+    {
+      "name": "W3C Understanding SC 3.3.3: Error Suggestion",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
+      "role": "Actionable error suggestion"
+    },
+    {
+      "name": "W3C Understanding SC 4.1.3: Status Messages",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "role": "Programmatic status announcements"
+    },
+    {
+      "name": "GOV.UK Design System: Error summary",
+      "url": "https://design-system.service.gov.uk/components/error-summary/",
+      "role": "Error summary pattern"
+    },
+    {
+      "name": "GOV.UK Design System: Error message",
+      "url": "https://design-system.service.gov.uk/components/error-message/",
+      "role": "Inline error message pattern"
+    }
+  ]
+}

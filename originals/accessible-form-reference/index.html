@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratoire de formulaire accessible · Edikka</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; line-height: 1.5; }
+    body { margin: 0; background: #f5f2ec; color: #171717; }
+    main { max-width: 46rem; margin: auto; padding: 2rem 1rem 5rem; }
+    h1 { max-width: 18ch; font-size: clamp(2rem, 7vw, 4rem); line-height: 1; }
+    form, .proof { margin-top: 2rem; padding: clamp(1rem, 4vw, 2rem); background: #fff; border: 1px solid #c9c2b7; }
+    label, legend { display: block; font-weight: 700; }
+    fieldset { border: 0; padding: 0; margin: 1.5rem 0; }
+    input, textarea, select, button { box-sizing: border-box; width: 100%; padding: .75rem; font: inherit; }
+    input, textarea, select { margin-top: .35rem; border: 2px solid #555; background: #fff; color: #171717; }
+    textarea { min-height: 8rem; resize: vertical; }
+    button { margin-top: 1rem; border: 2px solid #171717; background: #171717; color: #fff; font-weight: 800; cursor: pointer; }
+    button:disabled { cursor: wait; opacity: .65; }
+    :focus-visible { outline: 4px solid #ffbf47; outline-offset: 3px; }
+    .hint { display: block; margin-top: .25rem; color: #4a4a4a; font-weight: 400; }
+    .error-summary { border: 4px solid #b10e1e; padding: 1rem; margin-bottom: 1.5rem; }
+    .error-summary:focus { outline: 4px solid #ffbf47; }
+    .field-error { color: #b10e1e; font-weight: 700; }
+    [aria-invalid="true"] { border-color: #b10e1e; }
+    .status { margin-top: 1.5rem; padding: 1rem; background: #e8f1f8; }
+    .proof pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main>
+  <p>Instrument local Edikka · données fictives uniquement</p>
+  <h1>Observer tous les états d’un formulaire.</h1>
+  <p>Ce laboratoire distingue ce que voit la personne, ce que répond le serveur et ce qui a réellement été enregistré. Il n’envoie aucun e-mail et ne mesure aucune conversion.</p>
+
+  <form id="test-form" novalidate>
+    <div id="error-summary" class="error-summary" role="alert" tabindex="-1" hidden>
+      <h2>La demande n’a pas été envoyée</h2>
+      <ul id="error-list"></ul>
+    </div>
+
+    <label for="scenario">Scénario observé
+      <span class="hint" id="scenario-hint">Choisissez l’état technique que le serveur doit reproduire.</span>
+    </label>
+    <select id="scenario" name="scenario" aria-describedby="scenario-hint">
+      <option value="success">Succès enregistré</option>
+      <option value="invalid">Saisie invalide</option>
+      <option value="server_error">Erreur serveur avant enregistrement</option>
+      <option value="network_before">Interruption réseau avant réception</option>
+      <option value="ack_lost">Réponse perdue après enregistrement</option>
+      <option value="slow_success">Traitement lent puis succès</option>
+    </select>
+
+    <fieldset>
+      <legend>Données de test</legend>
+      <p>
+        <label for="name">Nom</label>
+        <span class="hint" id="name-hint">Au moins 2 caractères.</span>
+        <span class="field-error" id="name-error" hidden></span>
+        <input id="name" name="name" autocomplete="name" aria-describedby="name-hint name-error" value="Camille Test">
+      </p>
+      <p>
+        <label for="email">E-mail</label>
+        <span class="hint" id="email-hint">Utilisez une adresse fictive en example.test.</span>
+        <span class="field-error" id="email-error" hidden></span>
+        <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-hint email-error" value="camille@example.test">
+      </p>
+      <p>
+        <label for="message">Demande</label>
+        <span class="hint" id="message-hint">Au moins 10 caractères.</span>
+        <span class="field-error" id="message-error" hidden></span>
+        <textarea id="message" name="message" aria-describedby="message-hint message-error">Ceci est une demande de test reproductible.</textarea>
+      </p>
+    </fieldset>
+
+    <button id="submit-button" type="submit">Tester l’envoi</button>
+    <div id="status" class="status" role="status" aria-live="polite" aria-atomic="true">Aucun test exécuté.</div>
+  </form>
+
+  <section class="proof" aria-labelledby="proof-title">
+    <h2 id="proof-title">Preuve observable</h2>
+    <p>La trace indique la réponse reçue et, lorsqu’une réponse disparaît, le résultat de la vérification par clé d’idempotence.</p>
+    <pre id="proof-output">État initial.</pre>
+  </section>
+</main>
+<script>
+(() => {
+  const form = document.querySelector('#test-form');
+  const summary = document.querySelector('#error-summary');
+  const list = document.querySelector('#error-list');
+  const status = document.querySelector('#status');
+  const proof = document.querySelector('#proof-output');
+  const button = document.querySelector('#submit-button');
+  const fields = ['name', 'email', 'message'];
+  let idempotencyKey = crypto.randomUUID();
+
+  function clearErrors() {
+    summary.hidden = true;
+    list.replaceChildren();
+    for (const field of fields) {
+      const input = document.querySelector(`#${field}`);
+      const error = document.querySelector(`#${field}-error`);
+      input.removeAttribute('aria-invalid');
+      error.hidden = true;
+      error.textContent = '';
+    }
+  }
+
+  function showErrors(errors) {
+    clearErrors();
+    for (const [field, message] of Object.entries(errors)) {
+      const input = document.querySelector(`#${field}`);
+      const error = document.querySelector(`#${field}-error`);
+      input.setAttribute('aria-invalid', 'true');
+      error.textContent = message;
+      error.hidden = false;
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = `#${field}`;
+      link.textContent = message;
+      item.append(link);
+      list.append(item);
+    }
+    summary.hidden = false;
+    summary.focus();
+  }
+
+  async function verifyReceipt(key) {
+    const response = await fetch(`/api/submissions/${encodeURIComponent(key)}`, { cache: 'no-store' });
+    return response.ok ? response.json() : null;
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    clearErrors();
+    button.disabled = true;
+    status.textContent = 'Envoi du scénario de test…';
+    const payload = Object.fromEntries(new FormData(form));
+    if (payload.scenario === 'invalid') {
+      payload.email = 'adresse-invalide';
+      payload.message = 'court';
+    }
+
+    try {
+      const response = await fetch('/api/submissions', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'idempotency-key': idempotencyKey },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      proof.textContent = JSON.stringify({ httpStatus: response.status, idempotencyKey, result }, null, 2);
+      if (response.status === 422) {
+        showErrors(result.fields || {});
+        status.textContent = 'Des champs doivent être corrigés. Les autres données sont conservées.';
+      } else if (!response.ok) {
+        status.textContent = 'Le service n’a pas enregistré la demande. Vous pouvez réessayer sans ressaisir les champs.';
+      } else {
+        status.textContent = `Demande de test enregistrée sous la référence ${result.submission.id}.`;
+        idempotencyKey = crypto.randomUUID();
+      }
+    } catch (error) {
+      const receipt = await verifyReceipt(idempotencyKey).catch(() => null);
+      proof.textContent = JSON.stringify({ networkResponse: 'absente', idempotencyKey, receipt }, null, 2);
+      if (receipt) {
+        status.textContent = `La réponse réseau a été perdue, mais le serveur confirme l’enregistrement ${receipt.submission.id}. Aucun doublon n’est nécessaire.`;
+        idempotencyKey = crypto.randomUUID();
+      } else {
+        status.textContent = 'Le résultat est incertain : aucune réponse et aucun enregistrement retrouvé. Les données restent présentes pour permettre une reprise.';
+      }
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>

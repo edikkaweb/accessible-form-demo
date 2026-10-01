@@ -1,0 +1,446 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-01T14:54:37.228Z",
+  "checks": [
+    {
+      "id": "AFD-R01",
+      "expected": "browser: invalid data never creates a record (independent service validation)",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R02",
+      "expected": "browser: explicit refusal before storage is transient; values and key can be reused",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R03",
+      "expected": "browser: response lost after storage; status and retry find exactly one record",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R04",
+      "expected": "browser: first creation false; repeated key true; different content conflicts",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R05",
+      "expected": "browser: two concurrent requests reserve once; pending status is not found yet",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R06",
+      "expected": "browser: network loss before storage; status unavailable/lost/not-found remain distinct",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R07",
+      "expected": "browser: concurrent different content conflicts even while first request is pending",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R08",
+      "expected": "http: invalid data never creates a record (independent service validation)",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R09",
+      "expected": "http: explicit refusal before storage is transient; values and key can be reused",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R10",
+      "expected": "http: response lost after storage; status and retry find exactly one record",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R11",
+      "expected": "http: first creation false; repeated key true; different content conflicts",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R12",
+      "expected": "http: two concurrent requests reserve once; pending status is not found yet",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R13",
+      "expected": "http: network loss before storage; status unavailable/lost/not-found remain distinct",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-R14",
+      "expected": "http: concurrent different content conflicts even while first request is pending",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A15",
+      "expected": "canonical business content: fixed fields, NFC, trim, LF; settings excluded",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A16",
+      "expected": "names accept accents, apostrophes, hyphens and single characters; shared lengths",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A17",
+      "expected": "FR/EN: zero/one/many count, exact reference messages and two variants same rules",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A18",
+      "expected": "controller validates without transport; correction on blur preserves valid values",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A19",
+      "expected": "controller: no confirmation from registry after lost response; verify establishes it",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A20",
+      "expected": "status failures and not-found do not establish absence; original snapshot preserved",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A21",
+      "expected": "stop waiting does not cancel service; result ignored then recover by status",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A22",
+      "expected": "repeated activation guarded; deliberate retry preserves one reference",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A23",
+      "expected": "old result and journal never contaminate a reset scenario",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A24",
+      "expected": "export omits field values and content fingerprints in both variants",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A25",
+      "expected": "share links accept only public scenario; free text never serialized",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A26",
+      "expected": "static fallback: inactive form, no native GET submission, sources and full scenarios",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; pure engine / memory / static HTML",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A27",
+      "expected": "HTTP guardrails: JSON/size/origin/traversal and static-only API",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-A28",
+      "expected": "real HTTP cancellation stops client waiting but stored record can still be recovered",
+      "observed": "Assertion passed",
+      "method": "Automated Node test; real loopback HTTP",
+      "environment": "Node 22.12.0, macOS; UI delay overridden to 25–80 ms in timing tests",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "passed",
+      "proof": "docs/proofs/tests.tap"
+    },
+    {
+      "id": "AFD-UI01",
+      "expected": "Empty submission focuses summary; 4 errors then 1",
+      "observed": "Observed 4, then 1 after correction; document.activeElement=error-summary",
+      "method": "DOM + keyboard Enter",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI02",
+      "expected": "Each summary link focuses its field",
+      "observed": "firstName, lastName, email, request each focused",
+      "method": "Keyboard Enter + activeElement",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI03",
+      "expected": "Hints remain, errors removed after blur; wording preserves values",
+      "observed": "firstName-hint remains; invalid removed; counterexample preserves Éva",
+      "method": "DOM + input/blur/variant",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI04",
+      "expected": "B refuses once then retry records",
+      "observed": "0 records after refusal, 1 after retry",
+      "method": "Manual browser flow",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI05",
+      "expected": "C remains unknown with register=1 then status confirms",
+      "observed": "Unknown/non-confirmed reference before status; DEMO-001 after status; retry still 1",
+      "method": "Manual browser flow; desktop capture",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "docs/proofs/desktop-receipt-unknown.jpg"
+    },
+    {
+      "id": "AFD-UI06",
+      "expected": "D waits; repeated activation ignored; late focus stable",
+      "observed": "Sending state with focus primary; forced second UI activation logged ignored; 1 attempt",
+      "method": "Enter + forced click on aria-disabled button; DOM",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI07",
+      "expected": "HTTP C truly interrupts response, stays unknown then verifies",
+      "observed": "1 attempt, 1 record, unknown until status response; same reference",
+      "method": "Real HTTP, browser, corrected partial-response interruption",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI08",
+      "expected": "EN deep link and language switch preserve state and values",
+      "observed": "C selected from hash; EN unknown; switch FR retains English fictional request and unknown state",
+      "method": "Manual browser; 390×844",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI09",
+      "expected": "Mobile reflow and focus remain usable",
+      "observed": "scrollWidth=390, viewport=390; solid focus, primary/secondary actions readable",
+      "method": "Visual capture + DOM",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "docs/proofs/mobile-receipt-unknown.jpg"
+    },
+    {
+      "id": "AFD-UI10",
+      "expected": "Blocked scripts leave safe static content",
+      "observed": "fieldset and submit disabled; method=dialog; four scenarios and method present",
+      "method": "Local CSP script-src none; not full browser JS toggle",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI11",
+      "expected": "Conflict and new-intention dialogue are explicit",
+      "observed": "Conflict preserves original; dialog Escape closes; checking original confirms",
+      "method": "Manual browser + keyboard",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-UI12",
+      "expected": "Export omits values while preserving counts",
+      "observed": "HTTP JSON parsed; mode http, confirmed, 2 attempts, 1 record, no email/request text",
+      "method": "Visible JSON inspection",
+      "environment": "Codex in-app browser on macOS, 1440×1000 except stated; engine version not exposed",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "observed",
+      "proof": "Dated manual transcript / Edikka action #556"
+    },
+    {
+      "id": "AFD-AT01",
+      "expected": "VoiceOver/Safari announcements",
+      "observed": "No reliable listening session performed.",
+      "method": "Assistive technology",
+      "environment": "Not tested",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "not tested",
+      "proof": "Reproduction steps in docs/REPRODUCTION.md"
+    },
+    {
+      "id": "AFD-AT02",
+      "expected": "NVDA/Firefox announcements",
+      "observed": "No such assistive-technology session available here.",
+      "method": "Assistive technology",
+      "environment": "Not tested",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "not tested",
+      "proof": "Reproduction steps in docs/REPRODUCTION.md"
+    },
+    {
+      "id": "AFD-US01",
+      "expected": "Representative participants understand and recover",
+      "observed": "No participant study conducted.",
+      "method": "Participant study",
+      "environment": "Not tested",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "not tested",
+      "proof": "Reproduction steps in docs/REPRODUCTION.md"
+    },
+    {
+      "id": "AFD-UI13",
+      "expected": "Physical device and actual browser 200/400% zoom",
+      "observed": "Not measured; CSS viewport reflow is separate.",
+      "method": "Manual browser/device",
+      "environment": "Not tested",
+      "date": "2026-10-01T14:54:37.228Z",
+      "status": "not tested",
+      "proof": "Reproduction steps in docs/REPRODUCTION.md"
+    }
+  ]
+}

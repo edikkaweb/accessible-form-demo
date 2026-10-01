@@ -1,0 +1,150 @@
+TAP version 13
+# Subtest: browser: invalid data never creates a record (independent service validation)
+ok 1 - browser: invalid data never creates a record (independent service validation)
+  ---
+  duration_ms: 0.814667
+  ...
+# Subtest: browser: explicit refusal before storage is transient; values and key can be reused
+ok 2 - browser: explicit refusal before storage is transient; values and key can be reused
+  ---
+  duration_ms: 0.319
+  ...
+# Subtest: browser: response lost after storage; status and retry find exactly one record
+ok 3 - browser: response lost after storage; status and retry find exactly one record
+  ---
+  duration_ms: 0.282083
+  ...
+# Subtest: browser: first creation false; repeated key true; different content conflicts
+ok 4 - browser: first creation false; repeated key true; different content conflicts
+  ---
+  duration_ms: 0.141083
+  ...
+# Subtest: browser: two concurrent requests reserve once; pending status is not found yet
+ok 5 - browser: two concurrent requests reserve once; pending status is not found yet
+  ---
+  duration_ms: 41.88875
+  ...
+# Subtest: browser: network loss before storage; status unavailable/lost/not-found remain distinct
+ok 6 - browser: network loss before storage; status unavailable/lost/not-found remain distinct
+  ---
+  duration_ms: 0.184334
+  ...
+# Subtest: browser: concurrent different content conflicts even while first request is pending
+ok 7 - browser: concurrent different content conflicts even while first request is pending
+  ---
+  duration_ms: 42.692333
+  ...
+# Subtest: http: invalid data never creates a record (independent service validation)
+ok 8 - http: invalid data never creates a record (independent service validation)
+  ---
+  duration_ms: 18.789334
+  ...
+# Subtest: http: explicit refusal before storage is transient; values and key can be reused
+ok 9 - http: explicit refusal before storage is transient; values and key can be reused
+  ---
+  duration_ms: 9.953
+  ...
+# Subtest: http: response lost after storage; status and retry find exactly one record
+ok 10 - http: response lost after storage; status and retry find exactly one record
+  ---
+  duration_ms: 28.354208
+  ...
+# Subtest: http: first creation false; repeated key true; different content conflicts
+ok 11 - http: first creation false; repeated key true; different content conflicts
+  ---
+  duration_ms: 4.760958
+  ...
+# Subtest: http: two concurrent requests reserve once; pending status is not found yet
+ok 12 - http: two concurrent requests reserve once; pending status is not found yet
+  ---
+  duration_ms: 43.087916
+  ...
+# Subtest: http: network loss before storage; status unavailable/lost/not-found remain distinct
+ok 13 - http: network loss before storage; status unavailable/lost/not-found remain distinct
+  ---
+  duration_ms: 26.122834
+  ...
+# Subtest: http: concurrent different content conflicts even while first request is pending
+ok 14 - http: concurrent different content conflicts even while first request is pending
+  ---
+  duration_ms: 44.790625
+  ...
+# Subtest: canonical business content: fixed fields, NFC, trim, LF; settings excluded
+ok 15 - canonical business content: fixed fields, NFC, trim, LF; settings excluded
+  ---
+  duration_ms: 0.112708
+  ...
+# Subtest: names accept accents, apostrophes, hyphens and single characters; shared lengths
+ok 16 - names accept accents, apostrophes, hyphens and single characters; shared lengths
+  ---
+  duration_ms: 0.05475
+  ...
+# Subtest: FR/EN: zero/one/many count, exact reference messages and two variants same rules
+ok 17 - FR/EN: zero/one/many count, exact reference messages and two variants same rules
+  ---
+  duration_ms: 0.323708
+  ...
+# Subtest: controller validates without transport; correction on blur preserves valid values
+ok 18 - controller validates without transport; correction on blur preserves valid values
+  ---
+  duration_ms: 0.346083
+  ...
+# Subtest: controller: no confirmation from registry after lost response; verify establishes it
+ok 19 - controller: no confirmation from registry after lost response; verify establishes it
+  ---
+  duration_ms: 0.185875
+  ...
+# Subtest: status failures and not-found do not establish absence; original snapshot preserved
+ok 20 - status failures and not-found do not establish absence; original snapshot preserved
+  ---
+  duration_ms: 0.269417
+  ...
+# Subtest: stop waiting does not cancel service; result ignored then recover by status
+ok 21 - stop waiting does not cancel service; result ignored then recover by status
+  ---
+  duration_ms: 42.219917
+  ...
+# Subtest: repeated activation guarded; deliberate retry preserves one reference
+ok 22 - repeated activation guarded; deliberate retry preserves one reference
+  ---
+  duration_ms: 26.955542
+  ...
+# Subtest: old result and journal never contaminate a reset scenario
+ok 23 - old result and journal never contaminate a reset scenario
+  ---
+  duration_ms: 43.125125
+  ...
+# Subtest: export omits field values and content fingerprints in both variants
+ok 24 - export omits field values and content fingerprints in both variants
+  ---
+  duration_ms: 1.183
+  ...
+# Subtest: share links accept only public scenario; free text never serialized
+ok 25 - share links accept only public scenario; free text never serialized
+  ---
+  duration_ms: 0.561792
+  ...
+# Subtest: static fallback: inactive form, no native GET submission, sources and full scenarios
+ok 26 - static fallback: inactive form, no native GET submission, sources and full scenarios
+  ---
+  duration_ms: 0.975458
+  ...
+# Subtest: HTTP guardrails: JSON/size/origin/traversal and static-only API
+ok 27 - HTTP guardrails: JSON/size/origin/traversal and static-only API
+  ---
+  duration_ms: 9.324917
+  ...
+# Subtest: real HTTP cancellation stops client waiting but stored record can still be recovered
+ok 28 - real HTTP cancellation stops client waiting but stored record can still be recovered
+  ---
+  duration_ms: 107.996208
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 554.359166

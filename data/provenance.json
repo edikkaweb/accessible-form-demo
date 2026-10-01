@@ -1,0 +1,90 @@
+{
+  "importedAt": "2026-10-01T14:26:32.281Z",
+  "files": [
+    {
+      "path": "ux-writing/manifest.json",
+      "url": "https://www.edikka.com/docbd/data/protocole-ux-writing-edikka-v1-manifest.json",
+      "version": "ux-writing-edikka-reference-v1.0.1",
+      "license": "CC BY 4.0 (dataset; manifest preserved)",
+      "retrievedAt": "2026-10-01T14:26:32.143Z",
+      "bytes": 878,
+      "sha256": "cb72265c85f573f4eab14f9de416ad9c21db7f374de202c261b2826fec385ac9"
+    },
+    {
+      "path": "ux-writing/protocole-ux-writing-edikka-v1.json",
+      "url": "https://www.edikka.com/docbd/data/protocole-ux-writing-edikka-v1.json",
+      "version": "ux-writing-edikka-reference-v1.0.1",
+      "license": "CC BY 4.0 (Edikka)",
+      "retrievedAt": "2026-10-01T14:26:32.162Z",
+      "bytes": 27323,
+      "sha256": "568543626490b07aaa7c53109f387de0c8b3d763a01637564ebd43436614b09a",
+      "manifestVerified": true
+    },
+    {
+      "path": "ux-writing/protocole-ux-writing-edikka-v1.xlsx",
+      "url": "https://www.edikka.com/docbd/data/protocole-ux-writing-edikka-v1.xlsx",
+      "version": "ux-writing-edikka-reference-v1.0.1",
+      "license": "CC BY 4.0 (Edikka)",
+      "retrievedAt": "2026-10-01T14:26:32.183Z",
+      "bytes": 21152,
+      "sha256": "d5dfd9fe3bdaf8aa889baa575b0cff4ed0597d917e747518b5e69f242608e687",
+      "manifestVerified": true
+    },
+    {
+      "path": "ux-writing/ux-writing-interfaces-claires.md",
+      "url": "https://www.edikka.com/llms/insights/ux-writing-interfaces-claires.md",
+      "version": "ux-writing-edikka-reference-v1.0.1",
+      "license": "CC BY 4.0 (Edikka)",
+      "retrievedAt": "2026-10-01T14:26:32.202Z",
+      "bytes": 23286,
+      "sha256": "de5eb54850444738d8da86c868c6e35635b4f53f0cdbd17be8cadc7ac24628b5",
+      "manifestVerified": true
+    },
+    {
+      "path": "ux-writing/ux-writing-clearer-interfaces.md",
+      "url": "https://www.edikka.com/llms/insights/ux-writing-clearer-interfaces.md",
+      "version": "ux-writing-edikka-reference-v1.0.1",
+      "license": "CC BY 4.0 (Edikka)",
+      "retrievedAt": "2026-10-01T14:26:32.219Z",
+      "bytes": 20662,
+      "sha256": "e7ba888d75c25d6e3b7f5e1e648e98d2e216a8177685800cde02f3dd2e4ae413",
+      "manifestVerified": true
+    },
+    {
+      "path": "accessible-form-reference/README.md",
+      "url": "https://www.edikka.com/tools/accessible-form-reference/README.md",
+      "version": "1.0 declared in README",
+      "license": "No explicit license found in these four files; preserved attribution, excluded from new-code MIT scope.",
+      "retrievedAt": "2026-10-01T14:26:32.234Z",
+      "bytes": 1439,
+      "sha256": "9a1a05e326c00884344245a8528287a1269587ac7c32d19aefc4f99cf236cd22"
+    },
+    {
+      "path": "accessible-form-reference/index.html",
+      "url": "https://www.edikka.com/tools/accessible-form-reference/index.html",
+      "version": "1.0 declared in README",
+      "license": "No explicit license found in these four files; preserved attribution, excluded from new-code MIT scope.",
+      "retrievedAt": "2026-10-01T14:26:32.251Z",
+      "bytes": 8276,
+      "sha256": "ff3c37a734bd2c7aea64073be89b0d26f7728ef25448f1a6cf05ecc476b719d5"
+    },
+    {
+      "path": "accessible-form-reference/server.mjs",
+      "url": "https://www.edikka.com/tools/accessible-form-reference/server.mjs",
+      "version": "1.0 declared in README",
+      "license": "No explicit license found in these four files; preserved attribution, excluded from new-code MIT scope.",
+      "retrievedAt": "2026-10-01T14:26:32.265Z",
+      "bytes": 4225,
+      "sha256": "9466c9d466b524c18c37ba03aea97675c8982dc7f16a2d1a78c5e722e0e7894e"
+    },
+    {
+      "path": "accessible-form-reference/test.mjs",
+      "url": "https://www.edikka.com/tools/accessible-form-reference/test.mjs",
+      "version": "1.0 declared in README",
+      "license": "No explicit license found in these four files; preserved attribution, excluded from new-code MIT scope.",
+      "retrievedAt": "2026-10-01T14:26:32.281Z",
+      "bytes": 2325,
+      "sha256": "18cf4d01ac06de66aed4d3bf87292a73388c2e26f220eac08345aa5b37c240c1"
+    }
+  ]
+}

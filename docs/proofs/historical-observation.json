@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-01T14:44:57.008Z",
+  "node": "v22.12.0",
+  "source": "originals/accessible-form-reference/server.mjs",
+  "firstCreationDuplicate": true,
+  "changedContentStatus": 201,
+  "sameReference": true,
+  "oldContentRetained": true,
+  "conclusion": "Two historical defects reproduced by real HTTP; originals unchanged."
+}
