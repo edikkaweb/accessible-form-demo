@@ -14,6 +14,7 @@ for (const f of [
   "transports.mjs",
   "i18n.mjs",
   "style.css",
+  "favicon.svg",
 ])
   await cp(resolve(root, "src", f), resolve(dist, "assets", f));
 for (const dir of ["originals", "data"])

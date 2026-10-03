@@ -6,7 +6,7 @@ Une démonstration Edikka du **Protocole UX writing**, prolongée par un laborat
 
 **Exemple central :** le service enregistre une demande, mais sa réponse disparaît. Le formulaire affiche d’abord une incertitude. « Vérifier la réception » retrouve la référence ; une reprise avec la même clé ne crée pas de deuxième enregistrement.
 
-![Premier écran de la démonstration](docs/proofs/desktop-initial.jpg)
+![Premier écran de la démonstration](docs/preview.jpg)
 
 ## Essayer
 
@@ -75,3 +75,7 @@ Use the commands above with Node 22+. JSON evidence excludes field values and th
 ## Licences
 
 New code, new copy and tests: [MIT](LICENSE). Original UX writing resources retain **CC BY 4.0**, Edikka / Bertrand Morel. No explicit licence was found in the four historical form-lab files: they are preserved as attributed originals and **excluded from the MIT grant**. See [provenance and adaptations](docs/PROVENANCE.md).
+
+[Contribuer / Contributing](CONTRIBUTING.md) · [Toutes les démonstrations / All experiments](https://edikkaweb.github.io/)
+
+La détection automatique de GitHub peut afficher « Other » : le fichier LICENSE conserve les exclusions des archives, composants tiers et marques. Le code original reste sous MIT dans le périmètre indiqué. / GitHub may show “Other”; the existing licence scopes and exclusions remain authoritative.
